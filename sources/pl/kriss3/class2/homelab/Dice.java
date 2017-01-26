@@ -1,20 +1,28 @@
 package pl.kriss3.class2.homelab;
 
+import java.util.Random;
+
 public class Dice 
 {
-	private int numberOfSides;
-	public Dice(int numberOfSides)
+	private int maxDieValue;
+	public Dice(int maxDieValue)
 	{
-		setNumberOfSides(numberOfSides);
+		setNumberOfSides(maxDieValue);
 	}
 
 	public int getNumberOfSides()
 	{
-		return numberOfSides;
+		return maxDieValue;
 	}
 	
-	public void setNumberOfSides(int noOfSides)
+	public void setNumberOfSides(int value)
 	{
-		this.numberOfSides = noOfSides;
+		this.maxDieValue = value;
+	}
+	
+	public int roll()
+	{
+		Random rnd = new Random();
+		return rnd.nextInt(maxDieValue) + 1;
 	}
 }
