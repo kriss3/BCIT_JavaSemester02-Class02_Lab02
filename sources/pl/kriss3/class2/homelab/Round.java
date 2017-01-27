@@ -16,6 +16,6 @@ public class Round
 	
 	public void setNoOfRounds(int value)
 	{
-		this.noOfRounds = value < 0 || value > 6 ? 6 : value;
+		this.noOfRounds = value < 0 || value > 5 ? 5 : value;
 	}
 }

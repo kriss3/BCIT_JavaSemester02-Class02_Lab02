@@ -14,9 +14,9 @@ public class Game
 	
 	//Play has access to all settings: Players, Dice, Round
 	//And now the Engine
-	public int Play(Setup s)
+	public void Play(Setup s)
 	{		
-		for (int i = 1; i <= s.getRound().getNoOfRounds(); i ++) {
+		for (int i = 0; i <= s.getRound().getNoOfRounds(); i ++) {
 			while (didWeSkunked == false) 
 			{
 				d1 = s.getDice().roll();
@@ -33,7 +33,7 @@ public class Game
 					didWeSkunked = true;
 					totalScore = 0;
 					myRoundScore = 0;
-					System.out.println("Well, no go anymore!");
+					System.out.println("WE GOT SKUNKED !!!");
 					break;
 				}
 				
@@ -42,11 +42,11 @@ public class Game
 			}
 			
 			totalScore += myRoundScore;
-			System.out.println("Your score after round " + i + " is " + myRoundScore + ".");
+			System.out.println("Score after round " + i + " is " + myRoundScore + ".");
 			didWeSkunked = false;
 		}
 		
-		return totalScore;
+		System.out.println("Total Scor after the game: " + totalScore);
 		
 	}
 }
