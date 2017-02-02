@@ -4,17 +4,14 @@ import java.util.ArrayList;
 
 /**
  * Setup class will set Players, Dice and Round
- * @author kszczurowski
- *
+ * @author krzysztof szczurowski
+ * @see https://github.com/kriss3/BCIT_JavaSemester02-Class02_Lab02.git
  */
 public class Setup 
 {
 	//below will come from Scaner.in
 	//setup Players
 	private ArrayList<Player> ps;
-	
-	//Setup Die/Dies
-	private Dice d;
 	
 	//Setup Rounds
 	private Round round;
@@ -26,9 +23,7 @@ public class Setup
 			add(new Player("James", "Lost"));
 		}};
 		
-		d = new Dice(6);
-		
-		round = new Round(1);
+		setRound(new Round(1));
 	}
 	
 	public ArrayList<Player> getPlayers()
@@ -40,19 +35,6 @@ public class Setup
 	{
 		if(value != null)
 			ps.add(value);
-	}
-	
-	public Dice getDice()
-	{
-		return d;
-	}
-	
-	public void setDice(Dice value)
-	{
-		if(value != null)
-		{
-			d=value;
-		}
 	}
 	
 	public Round getRound()

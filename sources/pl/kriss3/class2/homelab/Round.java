@@ -6,7 +6,7 @@ public class Round
 	
 	public Round(int noOfRounds)
 	{
-		this.noOfRounds  = noOfRounds;
+		setNoOfRounds(noOfRounds);
 	}
 	
 	public int getNoOfRounds()
@@ -16,6 +16,9 @@ public class Round
 	
 	public void setNoOfRounds(int value)
 	{
-		this.noOfRounds = value < 0 || value > 5 ? 5 : value;
+		if(value > 0)
+			this.noOfRounds = value;
+		else
+			this.noOfRounds = 5;
 	}
 }
