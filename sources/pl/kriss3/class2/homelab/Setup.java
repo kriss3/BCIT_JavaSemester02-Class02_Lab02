@@ -18,11 +18,10 @@ public class Setup
 
 	public Setup()
 	{
-		this.allPlayers = new ArrayList<Player>(){{
-			add(new Player("John", "Winner"));
-			add(new Player("James", "Lost"));
-		}};
-		
+		this.allPlayers = new ArrayList<Player>();
+		this.allPlayers.add(new Player("John", "Winner"));
+		this.allPlayers.add(new Player("James", "Lost"));
+			
 		setRound(new Round(1));
 	}
 	
