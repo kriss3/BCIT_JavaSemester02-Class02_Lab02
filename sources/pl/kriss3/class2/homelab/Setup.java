@@ -11,14 +11,14 @@ public class Setup
 {
 	//below will come from Scaner.in
 	//setup Players
-	private ArrayList<Player> ps;
+	private ArrayList<Player> allPlayers;
 	
 	//Setup Rounds
 	private Round round;
 
 	public Setup()
 	{
-		this.ps = new ArrayList<Player>(){{
+		this.allPlayers = new ArrayList<Player>(){{
 			add(new Player("John", "Winner"));
 			add(new Player("James", "Lost"));
 		}};
@@ -28,13 +28,13 @@ public class Setup
 	
 	public ArrayList<Player> getPlayers()
 	{
-		return ps;
+		return allPlayers;
 	}
 	
 	public void setPlayer(Player value)
 	{
 		if(value != null)
-			ps.add(value);
+			allPlayers.add(value);
 	}
 	
 	public Round getRound()
