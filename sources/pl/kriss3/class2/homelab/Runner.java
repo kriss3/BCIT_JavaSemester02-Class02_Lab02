@@ -12,7 +12,7 @@ public class Runner
 	private static void Run()
 	{
 		Setup skunk = new Setup();
-		Game g = new Game();
-		g.Play(skunk);
+		Game game = new Game();
+		game.Play(skunk);
 	}
 }

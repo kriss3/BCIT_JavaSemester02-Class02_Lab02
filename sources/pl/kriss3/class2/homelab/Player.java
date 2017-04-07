@@ -10,13 +10,13 @@ public class Player
 	private String fName;
 	private String lName;
 	private boolean isStanding;
-	private int pScore;
+	private int playerScore;
 	
 	public Player(String fName, String lName)
 	{
 		this.fName = fName;
 		this.lName = lName;
-		this.pScore = 0;
+		this.playerScore = 0;
 		setState(true);
 	}
 	
@@ -42,17 +42,16 @@ public class Player
 	
 	public int getPlayerScore()
 	{
-		return this.pScore;
+		return this.playerScore;
 	}
 	
 	public void setPlayerScore(int value)
 	{
-		this.pScore = value;
+		this.playerScore = value;
 	}
 	
 	public String toString()
 	{
 		return String.format("%s %s", fName, lName);
 	}
-	
 }
